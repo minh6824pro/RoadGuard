@@ -15,7 +15,7 @@
 
         <!-- Đặt LoginActivity là activity khởi động -->
         <activity
-            android:name=".ProfileActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,6 +41,9 @@
             android:exported="true" />
         <activity
             android:name=".ResetPasswordAcivity"
+            android:exported="true" />
+        <activity
+            android:name=".ProfileActivity"
             android:exported="true" />
     </application>
 
