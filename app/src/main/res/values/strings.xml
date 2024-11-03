@@ -1,11 +1,13 @@
 <resources>
+
+    <!-- LOGIN STRING -->
     <string name="app_name">RoadGuard</string>
     <string name="logo_desc">RoadGuard logo</string>
     <string name="welcome_back">Chào mừng 👋</string>
     <string name="login_prompt">Hãy nhập thông tin đăng nhập vào bên dưới đê kết nối đến tài khoản của bạn </string>
     <string name="email">Email</string>
     <string name="password">Mật khẩu</string>
-    <string name="username_hint">TeLiet@gmail.com</string>
+    <string name="email_hint">TeLiet@gmail.com</string>
     <string name="password_hint">**********</string>
     <string name="forgot_password">Quên mật khẩu ?</string>
     <string name="login_button">Đăng nhập</string>
@@ -15,4 +17,44 @@
     <string name="forgot_password_clicked">Forgot Password clicked</string>
     <string name="register_clicked">Register clicked</string>
 
+
+    <!-- REGISTER STRING -->
+    <string name="register_title">Đăng ký</string>
+    <string name="register_subtitle">Vui lòng nhập thông tin của bạn để hoàn tất quá trình đăng ký tài khoản</string>
+
+    <string name="name">Tên</string>
+    <string name="confirm_password">Nhập lại mật khẩu</string>
+
+    <!-- Gợi ý nhập liệu -->
+    <string name="name_hint">Họ và tên</string>
+    <string name="confirm_password_hint">********</string>
+
+    <!-- Nút đăng ký -->
+    <string name="register_button">Đăng ký</string>
+
+    <!-- Đăng nhập liên kết dưới cùng -->
+    <string name="already_have_account">Đã có tài khoản? Đăng nhập</string>
+
+
+
+
+
+    <!-- FORGOT PASSWORD STRING -->
+    <string name="forgot_title">Quên mật khẩu ?</string>
+    <string name="forgot_subtitle">Vui lòng nhập email của bạn để đặt lại mật khẩu</string>
+    <string name="send_button">Gửi</string>
+
+
+    <!-- FORGOT PASSWORD INTPUT CODE STRING -->
+    <string name="input_code_title">Xác thực</string>
+    <string name="input_code_subtitle">Vui lòng nhập mã xác thực mà chúng tôi đã gửi qua email %1$s của bạn</string>
+    <string name="not_received">Chưa nhận được mã?</string>
+
+
+
+    <!-- RESET PASSWORD STRING -->
+    <string name="reset_title">Nhập lại mật khẩu</string>
+    <string name="reset_subtitle">Vui lòng nhập mật khẩu mới để đặt lại mật khẩu</string>
+    <string name="new_password">Mật khẩu mới</string>
+    <string name="agree_button">Xác nhận</string>
 </resources>
