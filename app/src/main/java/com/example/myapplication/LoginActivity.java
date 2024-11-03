@@ -1,12 +1,19 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.TextPaint;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -25,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         tvRegister = findViewById(R.id.tvRegister);
 
+        // Thiết lập sự kiện cho nút đăng nhập
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,13 +40,32 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-//        tvRegister.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        // Thiết lập SpannableString cho TextView tvRegister
+        String text = getString(R.string.register_prompt);
+        SpannableString spannableString = new SpannableString(text);
+
+        int startIndex = text.indexOf("Đăng ký");
+        int endIndex = startIndex + "Đăng ký".length();
+
+        ClickableSpan clickableSpan = new ClickableSpan() {
+            @Override
+            public void onClick(@NonNull View widget) {
+                // Xử lý sự kiện khi nhấn vào "Đăng ký"
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+
+            @Override
+            public void updateDrawState(@NonNull TextPaint ds) {
+                super.updateDrawState(ds);
+                ds.setColor(Color.BLUE); // Đặt màu xanh cho từ "Đăng ký"
+                ds.setUnderlineText(false); // Không gạch chân
+            }
+        };
+
+        spannableString.setSpan(clickableSpan, startIndex, endIndex, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        tvRegister.setText(spannableString);
+        tvRegister.setMovementMethod(LinkMovementMethod.getInstance()); // Cho phép bấm vào link
     }
 
     private void loginUser() {
@@ -52,7 +79,6 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         // Thực hiện đăng nhập (thực hiện logic xác thực ở đây)
-        // Ví dụ: kiểm tra username và password với một cơ sở dữ liệu
         if (username.equals("test@example.com") && password.equals("password")) {
             // Đăng nhập thành công, chuyển sang MainActivity
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
