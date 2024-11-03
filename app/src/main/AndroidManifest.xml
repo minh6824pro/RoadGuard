@@ -43,7 +43,7 @@
             android:name=".ResetPasswordAcivity"
             android:exported="true" />
         <activity
-            android:name=".ProfileActivity"
+            android:name=".MapActivity"
             android:exported="true" />
     </application>
 

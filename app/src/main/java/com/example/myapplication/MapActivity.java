@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class ProfileActivity extends AppCompatActivity {
+public class MapActivity extends AppCompatActivity {
 
     private EditText searchBar;
     private ImageView imageView, imageView2, imageView3, imageView4, imageView5, location;
@@ -22,7 +22,7 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_map);
 
         // Ánh xạ các view từ XML
         searchBar = findViewById(R.id.search_bar);
@@ -41,7 +41,7 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String searchText = searchBar.getText().toString();
-                Toast.makeText(ProfileActivity.this, "Tìm kiếm: " + searchText, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MapActivity.this, "Tìm kiếm: " + searchText, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -62,6 +62,6 @@ public class ProfileActivity extends AppCompatActivity {
 
     // Phương thức tiện ích để hiển thị thông báo
     private void showToast(@NonNull String message) {
-        Toast.makeText(ProfileActivity.this, message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(MapActivity.this, message, Toast.LENGTH_SHORT).show();
     }
 }
