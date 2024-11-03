@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-  
-</selector>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Shadow effect -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="24dp" />
+            <solid android:color="#FFFFFF" />
+            <padding
+                android:bottom="4dp"
+                android:left="0dp"
+                android:right="0dp"
+                android:top="4dp" />
+            <size
+                android:width="369dp"
+                android:height="48dp" />
+            <shadowLayer
+                android:shadowRadius="8"
+                android:shadowDx="0"
+                android:shadowDy="4"
+                android:shadowColor="#4D000000" />
+        </shape>
+    </item>
+
+    <!-- Background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="24dp" />
+        </shape>
+    </item>
+</layer-list>
