@@ -1,22 +1,20 @@
 package com.example.myapplication;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.InputType;
-import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextPaint;
 import android.text.TextUtils;
+import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
-import android.text.style.ForegroundColorSpan;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,75 +22,56 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import android.text.method.LinkMovementMethod;
 
-public class RegisterActivity extends AppCompatActivity {
+public class ForgotPasswordActivity extends AppCompatActivity {
 
-    private EditText etName, etEmail, etPassword, etConfirmPassword;
-    private Button btnRegister;
+    private ImageView backButton;
     private TextView tvLogin;
-
+    private EditText etEmailInput;
+    private Button btnSend;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_forgot_password); // Use the appropriate layout file name
 
-        // Ánh xạ các view
-        etName = findViewById(R.id.etNameInput);
-        etEmail = findViewById(R.id.etEmailInput);
-        etPassword = findViewById(R.id.etPasswordInput);
-        etConfirmPassword = findViewById(R.id.etConfirmPasswordInput);
-        btnRegister = findViewById(R.id.btnRegister);
+        // Initialize UI elements
+        backButton = findViewById(R.id.back_button);
         tvLogin = findViewById(R.id.tvLogin);
+        etEmailInput = findViewById(R.id.etEmailInput);
+        btnSend = findViewById(R.id.btnRegister);
 
-
-        // Xử lý khi nhấn nút đăng ký
-        btnRegister.setOnClickListener(new View.OnClickListener() {
+        // Set up back button click listener
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                registerUser();
+            public void onClick(View view) {
+                finish(); // Close the activity
             }
         });
 
-        // Đặt Spannable cho phần "Đăng nhập" trong TextView
+        // Set up login link click listener
         setLoginTextWithSpannable();
 
+        // Set up send button click listener
+        btnSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                String email = etEmailInput.getText().toString();
+                if (TextUtils.isEmpty(email)) {
+                    etEmailInput.setError("Vui lòng nhập email");
+                    return;
+                }
+                Toast.makeText(ForgotPasswordActivity.this, "Gửi mã thành công", Toast.LENGTH_SHORT).show();
+                Intent verificationIntent = new Intent(ForgotPasswordActivity.this, VerificationResetPasswordActivity.class);
+                verificationIntent.putExtra("email",email);
+                activityResultLauncher.launch(verificationIntent);
 
-    }
+                // Handle the send action (e.g., validate email, send reset link)
+                // Example: if (isValidEmail(email)) { ... }
+            }
+        });
 
-    private void registerUser() {
-        String name = etName.getText().toString().trim();
-        String email = etEmail.getText().toString().trim();
-        String password = etPassword.getText().toString().trim();
-        String confirmPassword = etConfirmPassword.getText().toString().trim();
-
-        // Kiểm tra tính hợp lệ của thông tin đăng ký
-        if (TextUtils.isEmpty(name)) {
-            etName.setError("Vui lòng nhập tên của bạn");
-            return;
-        }
-
-        if (TextUtils.isEmpty(email)) {
-            etEmail.setError("Vui lòng nhập email");
-            return;
-        }
-
-        if (TextUtils.isEmpty(password)) {
-            etPassword.setError("Vui lòng nhập mật khẩu");
-            return;
-        }
-
-        if (!password.equals(confirmPassword)) {
-            etConfirmPassword.setError("Mật khẩu xác nhận không khớp");
-            return;
-        }
-
-        // Hiển thị thông báo đăng ký thành công và chuyển sang màn hình đăng nhập
-        Toast.makeText(this, "Đã gửi mã xác nhận", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(RegisterActivity.this, VerificationRegisterActivity.class);
-        activityResultLauncher.launch(intent);
     }
 
     private void setLoginTextWithSpannable() {
