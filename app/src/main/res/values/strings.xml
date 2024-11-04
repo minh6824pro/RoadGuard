@@ -63,4 +63,31 @@
     <string name="japanese">日本語</string>
     <string name="english">English</string>
     <string name="vietnamese">Tiếng Việt</string>
+
+
+    <string-array name="time_options">
+        <item>Tuần này</item>
+        <item>Tháng này</item>
+        <item>Năm này</item>
+
+    </string-array>
+
+
+    <!-- HISTORY STRING -->
+    <string name="history_title">LỊCH SỬ</string>
+    <string name="khu_vuc">Thủ Đức</string>
+    <string name="vi_tri">10.8497° N, 106.7570° E</string>
+    <string name="kich_thuoc">Lớn</string>
+    <string name="phat_hien_boi">Phương Tuấn</string>
+
+    <!-- BOTTOM NAVBAR STRING -->
+    <string name="fab_camera_description">Mở máy ảnh</string>
+    <string name="account_title">Tài khoản</string>
+
+    <!--  PROFILE STRING  -->
+    <string name="save_button">Lưu</string>
+    <string name="name_profile">Lê Bá Sơn Tùng</string>
+    <string name="searchbar_hint">Tìm kiếm</string>
+    <string name="rank_title">Hạng</string>
+
 </resources>
