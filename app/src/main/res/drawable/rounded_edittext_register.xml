@@ -1,0 +1,19 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Nền của EditText -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- Độ bo góc -->
+    <corners android:radius="8dp" />
+
+    <!-- Độ dày và màu của viền -->
+    <stroke
+        android:width="2dp"
+    android:color="#D0D0D0" />
+
+    <!-- Padding bên trong EditText -->
+    <padding
+        android:left="8dp"
+        android:right="8dp"
+        android:top="8dp"
+        android:bottom="8dp" />
+</shape>

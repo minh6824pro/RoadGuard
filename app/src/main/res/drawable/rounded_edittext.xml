@@ -3,12 +3,12 @@
     <solid android:color="#FFFFFF" />
 
     <!-- Độ bo góc -->
-    <corners android:radius="12dp" />
+    <corners android:radius="8dp" />
 
     <!-- Độ dày và màu của viền -->
     <stroke
         android:width="2dp"
-    android:color="#000000" />
+    android:color="#121212" />
 
     <!-- Padding bên trong EditText -->
     <padding

@@ -27,6 +27,24 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VerificationResetPasswordActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VerificationRegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ResetPasswordAcivity"
+            android:exported="true" />
+        <activity
+            android:name=".MapActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

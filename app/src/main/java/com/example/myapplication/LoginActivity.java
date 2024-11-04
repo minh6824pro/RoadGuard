@@ -3,11 +3,13 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.InputType;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextPaint;
 import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etUsername, etPassword;
     private Button btnLogin;
     private TextView tvRegister;
+    private TextView tvForgotPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
         tvRegister = findViewById(R.id.tvRegister);
-
+        tvForgotPassword = findViewById(R.id.tvForgotPassword);
         // Thiết lập sự kiện cho nút đăng nhập
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +43,22 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        // Thiết lập sự kiện cho tv quên mật khẩu
+        tvForgotPassword.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intentForgotPassword=new Intent(LoginActivity.this,ForgotPasswordActivity.class);
+                startActivity(intentForgotPassword);
+            }
+        });
+
+
+        setLoginTextWithSpannable();
+
+
+    }
+
+    private void setLoginTextWithSpannable() {
         // Thiết lập SpannableString cho TextView tvRegister
         String text = getString(R.string.register_prompt);
         SpannableString spannableString = new SpannableString(text);
@@ -58,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void updateDrawState(@NonNull TextPaint ds) {
                 super.updateDrawState(ds);
-                ds.setColor(Color.BLUE); // Đặt màu xanh cho từ "Đăng ký"
+                ds.setColor(Color.parseColor("#304FFE")); // Đặt màu xanh cho từ "Đăng ký"
                 ds.setUnderlineText(false); // Không gạch chân
             }
         };
@@ -88,4 +107,6 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show();
         }
     }
+
 }
+
