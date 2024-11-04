@@ -7,4 +7,9 @@
     <color name="light_content_tertiary">#5A5A5A</color>
     <color name="Light_Background_BgAccent">#304FFE</color>
 
+    <color name="selectedColor">#304FFE</color>
+    <color name="unselectedColor">#2A2A2A</color>
+
+    <color name="selectedIconColor">#304FFE</color>
+    <color name="unselectedIconColor">#121212</color>
 </resources>

@@ -15,7 +15,7 @@
 
         <!-- Đặt LoginActivity là activity khởi động -->
         <activity
-            android:name=".LoginActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,9 +24,9 @@
         </activity>
 
         <!-- MainActivity không còn là activity khởi động -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
+<!--        <activity-->
+<!--            android:name=".MainActivity"-->
+<!--            android:exported="true" />-->
         <activity
             android:name=".RegisterActivity"
             android:exported="true" />

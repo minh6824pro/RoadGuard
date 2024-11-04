@@ -36,9 +36,6 @@
     <string name="already_have_account">Đã có tài khoản? Đăng nhập</string>
 
 
-
-
-
     <!-- FORGOT PASSWORD STRING -->
     <string name="forgot_title">Quên mật khẩu ?</string>
     <string name="forgot_subtitle">Vui lòng nhập email của bạn để đặt lại mật khẩu</string>
@@ -51,10 +48,15 @@
     <string name="not_received">Chưa nhận được mã?</string>
 
 
-
     <!-- RESET PASSWORD STRING -->
     <string name="reset_title">Nhập lại mật khẩu</string>
     <string name="reset_subtitle">Vui lòng nhập mật khẩu mới để đặt lại mật khẩu</string>
     <string name="new_password">Mật khẩu mới</string>
     <string name="agree_button">Xác nhận</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_label">Trang chủ</string>
+    <string name="map_label">Bản đồ</string>
+    <string name="history_label">Lịch sử</string>
+    <string name="setting_label">Cài đặt</string>
 </resources>
