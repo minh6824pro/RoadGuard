@@ -1,117 +1,508 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#333333"
-    android:padding="16dp">
+    android:background="@color/main_background">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="top|center"
+        android:padding="8dp">
 
-        <!-- Header -->
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="History"
-            android:textColor="#1E56F0"
-            android:textSize="28sp"
+            android:text="@string/history_title"
+            android:padding="25dp"
+            android:textSize="34sp"
             android:textStyle="bold"
-            android:layout_gravity="center"
-            android:paddingBottom="16dp" />
+            android:fontFamily="sans-serif-medium"
+            android:gravity="top|center"
+            android:lineHeight="41sp"
+            android:textColor="#304FFE"
+            android:layout_marginBottom="0dp"/>
 
-        <!-- History item -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@color/white"
-            android:padding="16dp"
-            android:layout_marginBottom="16dp">
+            android:gravity="top">
 
+            <!-- Item Card -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:background="@drawable/item_card_bg"
+                android:orientation="vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingRight="18dp"
+                android:paddingLeft="18dp"
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="center_horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <!-- Header (Title and Date) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Bạn gặp ổ gà"
-                    android:textColor="#000000"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:orientation="horizontal"
+                    android:divider="@android:color/transparent"
+                    android:showDividers="middle"
+                    android:dividerHeight="16dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Bạn gặp ổ gà"
+                        android:textSize="16sp"
+                        android:lineHeight="24sp"
+                        android:textColor="@color/Content_Primary"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8:00 - 08/03/2024"
+                        android:textAlignment="textEnd"
+                        android:textSize="14sp"
+                        android:lineHeight="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/Content_Primary"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <!-- Content Details -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="8:00 - 08/03/2024"
-                    android:textColor="#707070"
-                    android:textSize="14sp" />
+                    android:orientation="horizontal"
+                    android:divider="@android:color/transparent"
+                    android:showDividers="middle"
+                    android:dividerHeight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="17dp"
+                        android:layout_weight="1"
+                        android:text="Khu vực"
+                        android:lineSpacingExtra="-2sp"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/khu_vuc"
+                        android:textSize="14sp"
+                        android:textColor="#304FFE"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:divider="@android:color/transparent"
+                    android:showDividers="middle"
+                    android:dividerHeight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="17dp"
+                        android:layout_weight="1"
+                        android:text="Vị trí"
+                        android:lineSpacingExtra="-2sp"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vi_tri"
+                        android:textSize="14sp"
+                        android:textColor="#304FFE"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:divider="@android:color/transparent"
+                    android:showDividers="middle"
+                    android:dividerHeight="16dp"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="17dp"
+                        android:layout_weight="1"
+                        android:text="Kích thước"
+                        android:lineSpacingExtra="-2sp"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kich_thuoc"
+                        android:textSize="14sp"
+                        android:textColor="#304FFE"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:divider="@android:color/transparent"
+                    android:showDividers="middle"
+                    android:dividerHeight="16dp"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="17dp"
+                        android:layout_weight="1"
+                        android:text="Phát hiện bởi"
+                        android:lineSpacingExtra="-2sp"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/phat_hien_boi"
+                        android:textSize="14sp"
+                        android:textColor="#304FFE"
+                        android:gravity="end"/>
+                </LinearLayout>
+
             </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Khu vực"
-                android:textColor="#707070"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Thủ Đức"
-                android:textColor="#1E56F0"
-                android:textSize="14sp"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Vị trí"
-                android:textColor="#707070"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="10.8497° N, 106.7570° E"
-                android:textColor="#1E56F0"
-                android:textSize="14sp"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Kích thước"
-                android:textColor="#707070"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Lớn"
-                android:textColor="#1E56F0"
-                android:textSize="14sp"
-                android:layout_marginBottom="8dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Phát hiện bởi"
-                android:textColor="#707070"
-                android:textSize="14sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Phương Tuấn"
-                android:textColor="#1E56F0"
-                android:textSize="14sp" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="top">
 
+            <!-- Item Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_card_bg"
+                android:orientation="vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingRight="18dp"
+                android:paddingLeft="18dp"
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="center_horizontal">
+
+                <!-- Header (Title and Date) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:divider="@android:color/transparent"
+                    android:showDividers="middle"
+                    android:dividerHeight="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Bạn gặp ổ gà"
+                        android:textSize="16sp"
+                        android:lineHeight="24sp"
+                        android:textColor="@color/Content_Primary"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8:00 - 08/03/2024"
+                        android:textAlignment="textEnd"
+                        android:textSize="14sp"
+                        android:lineHeight="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/Content_Primary"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <!-- Content Details -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:divider="@android:color/transparent"
+                    android:showDividers="middle"
+                    android:dividerHeight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="17dp"
+                        android:layout_weight="1"
+                        android:text="Khu vực"
+                        android:lineSpacingExtra="-2sp"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/khu_vuc"
+                        android:textSize="14sp"
+                        android:textColor="#304FFE"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:divider="@android:color/transparent"
+                    android:showDividers="middle"
+                    android:dividerHeight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="17dp"
+                        android:layout_weight="1"
+                        android:text="Vị trí"
+                        android:lineSpacingExtra="-2sp"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vi_tri"
+                        android:textSize="14sp"
+                        android:textColor="#304FFE"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:divider="@android:color/transparent"
+                    android:showDividers="middle"
+                    android:dividerHeight="16dp"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="17dp"
+                        android:layout_weight="1"
+                        android:text="Kích thước"
+                        android:lineSpacingExtra="-2sp"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kich_thuoc"
+                        android:textSize="14sp"
+                        android:textColor="#304FFE"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:divider="@android:color/transparent"
+                    android:showDividers="middle"
+                    android:dividerHeight="16dp"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="17dp"
+                        android:layout_weight="1"
+                        android:text="Phát hiện bởi"
+                        android:lineSpacingExtra="-2sp"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/phat_hien_boi"
+                        android:textSize="14sp"
+                        android:textColor="#304FFE"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="top">
+
+            <!-- Item Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/item_card_bg"
+                android:orientation="vertical"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingRight="18dp"
+                android:paddingLeft="18dp"
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="center_horizontal">
+
+                <!-- Header (Title and Date) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:divider="@android:color/transparent"
+                    android:showDividers="middle"
+                    android:dividerHeight="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Bạn gặp ổ gà"
+                        android:textSize="16sp"
+                        android:lineHeight="24sp"
+                        android:textColor="@color/Content_Primary"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8:00 - 08/03/2024"
+                        android:textAlignment="textEnd"
+                        android:textSize="14sp"
+                        android:lineHeight="24sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/Content_Primary"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <!-- Content Details -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:divider="@android:color/transparent"
+                    android:showDividers="middle"
+                    android:dividerHeight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="17dp"
+                        android:layout_weight="1"
+                        android:text="Khu vực"
+                        android:lineSpacingExtra="-2sp"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/khu_vuc"
+                        android:textSize="14sp"
+                        android:textColor="#304FFE"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:divider="@android:color/transparent"
+                    android:showDividers="middle"
+                    android:dividerHeight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="17dp"
+                        android:layout_weight="1"
+                        android:text="Vị trí"
+                        android:lineSpacingExtra="-2sp"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vi_tri"
+                        android:textSize="14sp"
+                        android:textColor="#304FFE"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:divider="@android:color/transparent"
+                    android:showDividers="middle"
+                    android:dividerHeight="16dp"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="17dp"
+                        android:layout_weight="1"
+                        android:text="Kích thước"
+                        android:lineSpacingExtra="-2sp"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kich_thuoc"
+                        android:textSize="14sp"
+                        android:textColor="#304FFE"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:divider="@android:color/transparent"
+                    android:showDividers="middle"
+                    android:dividerHeight="16dp"
+                    android:layout_marginTop="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="17dp"
+                        android:layout_weight="1"
+                        android:text="Phát hiện bởi"
+                        android:lineSpacingExtra="-2sp"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/phat_hien_boi"
+                        android:textSize="14sp"
+                        android:textColor="#304FFE"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

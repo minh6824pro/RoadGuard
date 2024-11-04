@@ -15,7 +15,7 @@
 
         <!-- Đặt LoginActivity là activity khởi động -->
         <activity
-            android:name=".LoginActivity"
+            android:name=".HistoryActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,6 +45,7 @@
         <activity
             android:name=".MapActivity"
             android:exported="true" />
+
     </application>
 
 </manifest>
