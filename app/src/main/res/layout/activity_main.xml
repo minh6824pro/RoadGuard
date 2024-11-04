@@ -30,6 +30,8 @@
             app:labelVisibilityMode="labeled"
             android:background="@android:color/transparent"
             app:itemTextColor="@color/nav_item_color_selector"
+            app:itemTextAppearanceActive="@style/BottomNavigationViewTextStyle"
+            app:itemTextAppearanceInactive="@style/BottomNavigationViewTextStyle"
             app:itemIconTint="@color/nav_icon_color_selector"
             app:menu="@menu/bottom_navigation_menu"/>
 

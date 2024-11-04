@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="roundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="mySwitch">
+        <item name="android:colorControlActivated">@color/Light_Background_BgAccent</item>
+    </style>
+
+
+    <style name="BottomNavigationViewTextStyle">
+        <item name="android:fontFamily">@font/nunito_regular</item>
+    </style>
+</resources>

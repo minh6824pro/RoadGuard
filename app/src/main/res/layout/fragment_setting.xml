@@ -1,17 +1,421 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SettingFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;LinearLayout&#xA;    android:layout_width=&quot;match_parent&quot;&#xA;    android:layout_height=&quot;0dp&quot;&#xA;    android:layout_weight=&quot;7&quot;&#xA;    android:background=&quot;@drawable/rounded_bottom&quot;&#xA;    android:orientation=&quot;vertical&quot;&#xA;    android:padding=&quot;16dp&quot;>&#xA;&#xA;    &lt;!-- Header Title -->&#xA;    &lt;TextView&#xA;        android:layout_width=&quot;wrap_content&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:text=&quot;Cài đặt&quot;&#xA;        android:textSize=&quot;14sp&quot;&#xA;        android:textColor=&quot;#5A5A5A&quot;&#xA;        android:layout_gravity=&quot;start&quot;&#xA;        android:layout_marginTop=&quot;20dp&quot;&#xA;        android:fontFamily=&quot;@font/nunito_regular&quot;&#xA;        android:paddingBottom=&quot;16dp&quot; />&#xA;&#xA;    &lt;!-- Notification Toggle -->&#xA;    &lt;LinearLayout&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:gravity=&quot;center_vertical&quot;&#xA;        android:orientation=&quot;horizontal&quot;&#xA;        android:layout_marginLeft=&quot;10dp&quot;&#xA;        android:layout_marginRight=&quot;30dp&quot;&#xA;        android:paddingVertical=&quot;8dp&quot;>&#xA;&#xA;        &lt;TextView&#xA;            android:layout_width=&quot;0dp&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:layout_weight=&quot;1&quot;&#xA;            android:text=&quot;Thông Báo&quot;&#xA;            android:fontFamily=&quot;@font/nunito_semibold&quot;&#xA;            android:textColor=&quot;@color/Light_Background_BgAccent&quot;&#xA;            android:textSize=&quot;16sp&quot; />&#xA;&#xA;        &lt;Switch&#xA;            android:layout_width=&quot;wrap_content&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:checked=&quot;true&quot;&#xA;            android:theme=&quot;@style/mySwitch&quot;&#xA;            android:thumb=&quot;@drawable/baseline_brightness_1_24&quot;&#xA;            android:track=&quot;@drawable/track_selector&quot;&#xA;            android:padding=&quot;1dp&quot; />&#xA;    &lt;/LinearLayout>&#xA;&#xA;    &lt;!-- Account Option -->&#xA;    &lt;LinearLayout&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:gravity=&quot;center_vertical&quot;&#xA;        android:orientation=&quot;horizontal&quot;&#xA;        android:layout_marginLeft=&quot;10dp&quot;&#xA;        android:layout_marginRight=&quot;20dp&quot;&#xA;        android:paddingVertical=&quot;8dp&quot;>&#xA;&#xA;        &lt;TextView&#xA;            android:layout_width=&quot;0dp&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:layout_weight=&quot;1&quot;&#xA;            android:text=&quot;Tài khoản&quot;&#xA;            android:textSize=&quot;16sp&quot;&#xA;            android:fontFamily=&quot;@font/nunito_semibold&quot;&#xA;            android:textColor=&quot;@color/Light_Background_BgAccent&quot; />&#xA;&#xA;        &lt;ImageView&#xA;            android:layout_width=&quot;wrap_content&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:src=&quot;@drawable/ic_arrow_down&quot;&#xA;            android:layout_margin=&quot;10dp&quot;&#xA;            android:padding=&quot;1dp&quot;&#xA;            app:tint=&quot;#5A5A5A&quot;/>&#xA;    &lt;/LinearLayout>&#xA;&#xA;    &lt;!-- Terms Option -->&#xA;    &lt;LinearLayout&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:gravity=&quot;center_vertical&quot;&#xA;        android:orientation=&quot;horizontal&quot;&#xA;        android:layout_marginLeft=&quot;10dp&quot;&#xA;        android:layout_marginRight=&quot;20dp&quot;&#xA;        android:paddingVertical=&quot;8dp&quot;>&#xA;&#xA;        &lt;TextView&#xA;            android:layout_width=&quot;0dp&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:layout_weight=&quot;1&quot;&#xA;            android:text=&quot;Điều khoản&quot;&#xA;            android:textSize=&quot;16sp&quot;&#xA;            android:fontFamily=&quot;@font/nunito_semibold&quot;&#xA;            android:textColor=&quot;@color/Light_Background_BgAccent&quot; />&#xA;&#xA;        &lt;ImageView&#xA;            android:layout_width=&quot;wrap_content&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:src=&quot;@drawable/ic_arrow_down&quot;&#xA;            android:layout_margin=&quot;10dp&quot;&#xA;            android:padding=&quot;1dp&quot;&#xA;            app:tint=&quot;#5A5A5A&quot;/>&#xA;    &lt;/LinearLayout>&#xA;&#xA;    &lt;!-- Language Option -->&#xA;    &lt;LinearLayout&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:gravity=&quot;center_vertical&quot;&#xA;        android:orientation=&quot;horizontal&quot;&#xA;        android:layout_marginLeft=&quot;10dp&quot;&#xA;        android:layout_marginRight=&quot;20dp&quot;&#xA;        android:paddingVertical=&quot;8dp&quot;>&#xA;&#xA;        &lt;TextView&#xA;            android:layout_width=&quot;0dp&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:layout_weight=&quot;1&quot;&#xA;            android:text=&quot;Ngôn ngữ&quot;&#xA;            android:textSize=&quot;16sp&quot;&#xA;            android:fontFamily=&quot;@font/nunito_semibold&quot;&#xA;            android:textColor=&quot;@color/Light_Background_BgAccent&quot; />&#xA;&#xA;        &lt;ImageView&#xA;            android:layout_width=&quot;wrap_content&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:src=&quot;@drawable/ic_arrow_down&quot;&#xA;            android:layout_margin=&quot;10dp&quot;&#xA;            android:padding=&quot;1dp&quot;&#xA;            app:tint=&quot;#5A5A5A&quot;/>&#xA;    &lt;/LinearLayout>&#xA;&#xA;    &lt;!-- Rank Option -->&#xA;    &lt;LinearLayout&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:gravity=&quot;center_vertical&quot;&#xA;        android:orientation=&quot;horizontal&quot;&#xA;        android:layout_marginLeft=&quot;10dp&quot;&#xA;        android:layout_marginRight=&quot;20dp&quot;&#xA;        android:paddingVertical=&quot;8dp&quot;>&#xA;&#xA;        &lt;TextView&#xA;            android:layout_width=&quot;0dp&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:layout_weight=&quot;1&quot;&#xA;            android:text=&quot;Hạng&quot;&#xA;            android:textSize=&quot;16sp&quot;&#xA;            android:fontFamily=&quot;@font/nunito_semibold&quot;&#xA;            android:textColor=&quot;@color/Light_Background_BgAccent&quot; />&#xA;&#xA;        &lt;ImageView&#xA;            android:layout_width=&quot;wrap_content&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:src=&quot;@drawable/ic_arrow_down&quot;&#xA;            android:layout_margin=&quot;10dp&quot;&#xA;            android:padding=&quot;1dp&quot;&#xA;            app:tint=&quot;#5A5A5A&quot;/>&#xA;    &lt;/LinearLayout>&#xA;&#xA;    &lt;!-- App Info Option -->&#xA;    &lt;TextView&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:text=&quot;Thông tin ứng dụng&quot;&#xA;        android:textSize=&quot;16sp&quot;&#xA;        android:layout_marginLeft=&quot;10dp&quot;&#xA;        android:textColor=&quot;@color/Light_Background_BgAccent&quot;&#xA;        android:gravity=&quot;center_vertical&quot;&#xA;        android:fontFamily=&quot;@font/nunito_semibold&quot;&#xA;        android:paddingVertical=&quot;8dp&quot; />&#xA;&#xA;    &lt;!-- Button at the end -->&#xA;    &lt;Button&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:text=&quot;Lưu Cài Đặt&quot;&#xA;        android:backgroundTint=&quot;@color/Accent_Color&quot; &lt;!-- Change the button color as needed -->&#xA;        android:textColor=&quot;@android:color/white&quot;&#xA;        android:layout_marginTop=&quot;16dp&quot; /> &lt;!-- Margin above the button -->&#xA;&lt;/LinearLayout>&#xA;" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;LinearLayout&#xA;    android:layout_width=&quot;match_parent&quot;&#xA;    android:layout_height=&quot;0dp&quot;&#xA;    android:layout_weight=&quot;7&quot;&#xA;    android:background=&quot;@drawable/rounded_bottom&quot;&#xA;    android:orientation=&quot;vertical&quot;&#xA;    android:padding=&quot;16dp&quot;>&#xA;&#xA;    &lt;!-- Header Title -->&#xA;    &lt;TextView&#xA;        android:layout_width=&quot;wrap_content&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:text=&quot;Cài đặt&quot;&#xA;        android:textSize=&quot;14sp&quot;&#xA;        android:textColor=&quot;#5A5A5A&quot;&#xA;        android:layout_gravity=&quot;start&quot;&#xA;        android:layout_marginTop=&quot;20dp&quot;&#xA;        android:fontFamily=&quot;@font/nunito_regular&quot;&#xA;        android:paddingBottom=&quot;16dp&quot; />&#xA;&#xA;    &lt;!-- Notification Toggle -->&#xA;    &lt;LinearLayout&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:gravity=&quot;center_vertical&quot;&#xA;        android:orientation=&quot;horizontal&quot;&#xA;        android:layout_marginLeft=&quot;10dp&quot;&#xA;        android:layout_marginRight=&quot;30dp&quot;&#xA;        android:paddingVertical=&quot;8dp&quot;>&#xA;&#xA;        &lt;TextView&#xA;            android:layout_width=&quot;0dp&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:layout_weight=&quot;1&quot;&#xA;            android:text=&quot;Thông Báo&quot;&#xA;            android:fontFamily=&quot;@font/nunito_semibold&quot;&#xA;            android:textColor=&quot;@color/Light_Background_BgAccent&quot;&#xA;            android:textSize=&quot;16sp&quot; />&#xA;&#xA;        &lt;Switch&#xA;            android:layout_width=&quot;wrap_content&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:checked=&quot;true&quot;&#xA;            android:theme=&quot;@style/mySwitch&quot;&#xA;            android:thumb=&quot;@drawable/baseline_brightness_1_24&quot;&#xA;            android:track=&quot;@drawable/track_selector&quot;&#xA;            android:padding=&quot;1dp&quot; />&#xA;    &lt;/LinearLayout>&#xA;&#xA;    &lt;!-- Account Option -->&#xA;    &lt;LinearLayout&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:gravity=&quot;center_vertical&quot;&#xA;        android:orientation=&quot;horizontal&quot;&#xA;        android:layout_marginLeft=&quot;10dp&quot;&#xA;        android:layout_marginRight=&quot;20dp&quot;&#xA;        android:paddingVertical=&quot;8dp&quot;>&#xA;&#xA;        &lt;TextView&#xA;            android:layout_width=&quot;0dp&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:layout_weight=&quot;1&quot;&#xA;            android:text=&quot;Tài khoản&quot;&#xA;            android:textSize=&quot;16sp&quot;&#xA;            android:fontFamily=&quot;@font/nunito_semibold&quot;&#xA;            android:textColor=&quot;@color/Light_Background_BgAccent&quot; />&#xA;&#xA;        &lt;ImageView&#xA;            android:layout_width=&quot;wrap_content&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:src=&quot;@drawable/ic_arrow_down&quot;&#xA;            android:layout_margin=&quot;10dp&quot;&#xA;            android:padding=&quot;1dp&quot;&#xA;            app:tint=&quot;#5A5A5A&quot;/>&#xA;    &lt;/LinearLayout>&#xA;&#xA;    &lt;!-- Terms Option -->&#xA;    &lt;LinearLayout&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:gravity=&quot;center_vertical&quot;&#xA;        android:orientation=&quot;horizontal&quot;&#xA;        android:layout_marginLeft=&quot;10dp&quot;&#xA;        android:layout_marginRight=&quot;20dp&quot;&#xA;        android:paddingVertical=&quot;8dp&quot;>&#xA;&#xA;        &lt;TextView&#xA;            android:layout_width=&quot;0dp&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:layout_weight=&quot;1&quot;&#xA;            android:text=&quot;Điều khoản&quot;&#xA;            android:textSize=&quot;16sp&quot;&#xA;            android:fontFamily=&quot;@font/nunito_semibold&quot;&#xA;            android:textColor=&quot;@color/Light_Background_BgAccent&quot; />&#xA;&#xA;        &lt;ImageView&#xA;            android:layout_width=&quot;wrap_content&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:src=&quot;@drawable/ic_arrow_down&quot;&#xA;            android:layout_margin=&quot;10dp&quot;&#xA;            android:padding=&quot;1dp&quot;&#xA;            app:tint=&quot;#5A5A5A&quot;/>&#xA;    &lt;/LinearLayout>&#xA;&#xA;    &lt;!-- Language Option -->&#xA;    &lt;LinearLayout&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:gravity=&quot;center_vertical&quot;&#xA;        android:orientation=&quot;horizontal&quot;&#xA;        android:layout_marginLeft=&quot;10dp&quot;&#xA;        android:layout_marginRight=&quot;20dp&quot;&#xA;        android:paddingVertical=&quot;8dp&quot;>&#xA;&#xA;        &lt;TextView&#xA;            android:layout_width=&quot;0dp&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:layout_weight=&quot;1&quot;&#xA;            android:text=&quot;Ngôn ngữ&quot;&#xA;            android:textSize=&quot;16sp&quot;&#xA;            android:fontFamily=&quot;@font/nunito_semibold&quot;&#xA;            android:textColor=&quot;@color/Light_Background_BgAccent&quot; />&#xA;&#xA;        &lt;ImageView&#xA;            android:layout_width=&quot;wrap_content&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:src=&quot;@drawable/ic_arrow_down&quot;&#xA;            android:layout_margin=&quot;10dp&quot;&#xA;            android:padding=&quot;1dp&quot;&#xA;            app:tint=&quot;#5A5A5A&quot;/>&#xA;    &lt;/LinearLayout>&#xA;&#xA;    &lt;!-- Rank Option -->&#xA;    &lt;LinearLayout&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:gravity=&quot;center_vertical&quot;&#xA;        android:orientation=&quot;horizontal&quot;&#xA;        android:layout_marginLeft=&quot;10dp&quot;&#xA;        android:layout_marginRight=&quot;20dp&quot;&#xA;        android:paddingVertical=&quot;8dp&quot;>&#xA;&#xA;        &lt;TextView&#xA;            android:layout_width=&quot;0dp&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:layout_weight=&quot;1&quot;&#xA;            android:text=&quot;Hạng&quot;&#xA;            android:textSize=&quot;16sp&quot;&#xA;            android:fontFamily=&quot;@font/nunito_semibold&quot;&#xA;            android:textColor=&quot;@color/Light_Background_BgAccent&quot; />&#xA;&#xA;        &lt;ImageView&#xA;            android:layout_width=&quot;wrap_content&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:src=&quot;@drawable/ic_arrow_down&quot;&#xA;            android:layout_margin=&quot;10dp&quot;&#xA;            android:padding=&quot;1dp&quot;&#xA;            app:tint=&quot;#5A5A5A&quot;/>&#xA;    &lt;/LinearLayout>&#xA;&#xA;    &lt;!-- App Info Option -->&#xA;    &lt;TextView&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:text=&quot;Thông tin ứng dụng&quot;&#xA;        android:textSize=&quot;16sp&quot;&#xA;        android:layout_marginLeft=&quot;10dp&quot;&#xA;        android:textColor=&quot;@color/Light_Background_BgAccent&quot;&#xA;        android:gravity=&quot;center_vertical&quot;&#xA;        android:fontFamily=&quot;@font/nunito_semibold&quot;&#xA;        android:paddingVertical=&quot;8dp&quot; />&#xA;&#xA;    &lt;!-- Button at the end -->&#xA;    &lt;Button&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:text=&quot;Lưu Cài Đặt&quot;&#xA;        android:backgroundTint=&quot;@color/Accent_Color&quot; &lt;!-- Change the button color as needed -->&#xA;        android:textColor=&quot;@android:color/white&quot;&#xA;        android:layout_marginTop=&quot;16dp&quot; /> &lt;!-- Margin above the button -->&#xA;&lt;/LinearLayout>&#xA;" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="&lt;LinearLayout&#xA;    android:layout_width=&quot;match_parent&quot;&#xA;    android:layout_height=&quot;0dp&quot;&#xA;    android:layout_weight=&quot;7&quot;&#xA;    android:background=&quot;@drawable/rounded_bottom&quot;&#xA;    android:orientation=&quot;vertical&quot;&#xA;    android:padding=&quot;16dp&quot;>&#xA;&#xA;    &lt;!-- Header Title -->&#xA;    &lt;TextView&#xA;        android:layout_width=&quot;wrap_content&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:text=&quot;Cài đặt&quot;&#xA;        android:textSize=&quot;14sp&quot;&#xA;        android:textColor=&quot;#5A5A5A&quot;&#xA;        android:layout_gravity=&quot;start&quot;&#xA;        android:layout_marginTop=&quot;20dp&quot;&#xA;        android:fontFamily=&quot;@font/nunito_regular&quot;&#xA;        android:paddingBottom=&quot;16dp&quot; />&#xA;&#xA;    &lt;!-- Notification Toggle -->&#xA;    &lt;LinearLayout&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:gravity=&quot;center_vertical&quot;&#xA;        android:orientation=&quot;horizontal&quot;&#xA;        android:layout_marginLeft=&quot;10dp&quot;&#xA;        android:layout_marginRight=&quot;30dp&quot;&#xA;        android:paddingVertical=&quot;8dp&quot;>&#xA;&#xA;        &lt;TextView&#xA;            android:layout_width=&quot;0dp&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:layout_weight=&quot;1&quot;&#xA;            android:text=&quot;Thông Báo&quot;&#xA;            android:fontFamily=&quot;@font/nunito_semibold&quot;&#xA;            android:textColor=&quot;@color/Light_Background_BgAccent&quot;&#xA;            android:textSize=&quot;16sp&quot; />&#xA;&#xA;        &lt;Switch&#xA;            android:layout_width=&quot;wrap_content&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:checked=&quot;true&quot;&#xA;            android:theme=&quot;@style/mySwitch&quot;&#xA;            android:thumb=&quot;@drawable/baseline_brightness_1_24&quot;&#xA;            android:track=&quot;@drawable/track_selector&quot;&#xA;            android:padding=&quot;1dp&quot; />&#xA;    &lt;/LinearLayout>&#xA;&#xA;    &lt;!-- Account Option -->&#xA;    &lt;LinearLayout&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:gravity=&quot;center_vertical&quot;&#xA;        android:orientation=&quot;horizontal&quot;&#xA;        android:layout_marginLeft=&quot;10dp&quot;&#xA;        android:layout_marginRight=&quot;20dp&quot;&#xA;        android:paddingVertical=&quot;8dp&quot;>&#xA;&#xA;        &lt;TextView&#xA;            android:layout_width=&quot;0dp&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:layout_weight=&quot;1&quot;&#xA;            android:text=&quot;Tài khoản&quot;&#xA;            android:textSize=&quot;16sp&quot;&#xA;            android:fontFamily=&quot;@font/nunito_semibold&quot;&#xA;            android:textColor=&quot;@color/Light_Background_BgAccent&quot; />&#xA;&#xA;        &lt;ImageView&#xA;            android:layout_width=&quot;wrap_content&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:src=&quot;@drawable/ic_arrow_down&quot;&#xA;            android:layout_margin=&quot;10dp&quot;&#xA;            android:padding=&quot;1dp&quot;&#xA;            app:tint=&quot;#5A5A5A&quot;/>&#xA;    &lt;/LinearLayout>&#xA;&#xA;    &lt;!-- Terms Option -->&#xA;    &lt;LinearLayout&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:gravity=&quot;center_vertical&quot;&#xA;        android:orientation=&quot;horizontal&quot;&#xA;        android:layout_marginLeft=&quot;10dp&quot;&#xA;        android:layout_marginRight=&quot;20dp&quot;&#xA;        android:paddingVertical=&quot;8dp&quot;>&#xA;&#xA;        &lt;TextView&#xA;            android:layout_width=&quot;0dp&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:layout_weight=&quot;1&quot;&#xA;            android:text=&quot;Điều khoản&quot;&#xA;            android:textSize=&quot;16sp&quot;&#xA;            android:fontFamily=&quot;@font/nunito_semibold&quot;&#xA;            android:textColor=&quot;@color/Light_Background_BgAccent&quot; />&#xA;&#xA;        &lt;ImageView&#xA;            android:layout_width=&quot;wrap_content&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:src=&quot;@drawable/ic_arrow_down&quot;&#xA;            android:layout_margin=&quot;10dp&quot;&#xA;            android:padding=&quot;1dp&quot;&#xA;            app:tint=&quot;#5A5A5A&quot;/>&#xA;    &lt;/LinearLayout>&#xA;&#xA;    &lt;!-- Language Option -->&#xA;    &lt;LinearLayout&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:gravity=&quot;center_vertical&quot;&#xA;        android:orientation=&quot;horizontal&quot;&#xA;        android:layout_marginLeft=&quot;10dp&quot;&#xA;        android:layout_marginRight=&quot;20dp&quot;&#xA;        android:paddingVertical=&quot;8dp&quot;>&#xA;&#xA;        &lt;TextView&#xA;            android:layout_width=&quot;0dp&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:layout_weight=&quot;1&quot;&#xA;            android:text=&quot;Ngôn ngữ&quot;&#xA;            android:textSize=&quot;16sp&quot;&#xA;            android:fontFamily=&quot;@font/nunito_semibold&quot;&#xA;            android:textColor=&quot;@color/Light_Background_BgAccent&quot; />&#xA;&#xA;        &lt;ImageView&#xA;            android:layout_width=&quot;wrap_content&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:src=&quot;@drawable/ic_arrow_down&quot;&#xA;            android:layout_margin=&quot;10dp&quot;&#xA;            android:padding=&quot;1dp&quot;&#xA;            app:tint=&quot;#5A5A5A&quot;/>&#xA;    &lt;/LinearLayout>&#xA;&#xA;    &lt;!-- Rank Option -->&#xA;    &lt;LinearLayout&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:gravity=&quot;center_vertical&quot;&#xA;        android:orientation=&quot;horizontal&quot;&#xA;        android:layout_marginLeft=&quot;10dp&quot;&#xA;        android:layout_marginRight=&quot;20dp&quot;&#xA;        android:paddingVertical=&quot;8dp&quot;>&#xA;&#xA;        &lt;TextView&#xA;            android:layout_width=&quot;0dp&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:layout_weight=&quot;1&quot;&#xA;            android:text=&quot;Hạng&quot;&#xA;            android:textSize=&quot;16sp&quot;&#xA;            android:fontFamily=&quot;@font/nunito_semibold&quot;&#xA;            android:textColor=&quot;@color/Light_Background_BgAccent&quot; />&#xA;&#xA;        &lt;ImageView&#xA;            android:layout_width=&quot;wrap_content&quot;&#xA;            android:layout_height=&quot;wrap_content&quot;&#xA;            android:src=&quot;@drawable/ic_arrow_down&quot;&#xA;            android:layout_margin=&quot;10dp&quot;&#xA;            android:padding=&quot;1dp&quot;&#xA;            app:tint=&quot;#5A5A5A&quot;/>&#xA;    &lt;/LinearLayout>&#xA;&#xA;    &lt;!-- App Info Option -->&#xA;    &lt;TextView&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:text=&quot;Thông tin ứng dụng&quot;&#xA;        android:textSize=&quot;16sp&quot;&#xA;        android:layout_marginLeft=&quot;10dp&quot;&#xA;        android:textColor=&quot;@color/Light_Background_BgAccent&quot;&#xA;        android:gravity=&quot;center_vertical&quot;&#xA;        android:fontFamily=&quot;@font/nunito_semibold&quot;&#xA;        android:paddingVertical=&quot;8dp&quot; />&#xA;&#xA;    &lt;!-- Button at the end -->&#xA;    &lt;Button&#xA;        android:layout_width=&quot;match_parent&quot;&#xA;        android:layout_height=&quot;wrap_content&quot;&#xA;        android:text=&quot;Lưu Cài Đặt&quot;&#xA;        android:backgroundTint=&quot;@color/Accent_Color&quot; &lt;!-- Change the button color as needed -->&#xA;        android:textColor=&quot;@android:color/white&quot;&#xA;        android:layout_marginTop=&quot;16dp&quot; /> &lt;!-- Margin above the button -->&#xA;&lt;/LinearLayout>&#xA;" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Setting"
-        android:gravity="center"
-        android:textSize="30sp"
-        android:textColor="@color/black"/>
+        android:orientation="vertical"
+        android:background="@color/Light_Background_BgAccent">
+
+        <!-- Top LinearLayout for Profile Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <!-- Profile Card ConstraintLayout -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Light_Background_BgAccent"
+                android:padding="16dp"
+                android:layout_marginLeft="20dp">
+
+                <!-- Avatar and Name LinearLayout -->
+                <LinearLayout
+                    android:id="@+id/avatar_name_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <!-- Profile Image -->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_marginEnd="8dp"
+                        android:padding="2dp"
+                        android:src="@drawable/profile_sontung"
+                        app:shapeAppearanceOverlay="@style/roundedImageView"
+                        android:scaleType="centerCrop"
+                        app:strokeColor="@android:color/white"
+                        app:strokeWidth="2dp" />
+
+                    <!-- Name and Badge LinearLayout -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Silver Badge Text -->
+
+                        <ImageView
+                            android:id="@+id/badge_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/gold_badge" />
+                        <!-- Name Text -->
+                        <TextView
+                            android:id="@+id/name_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sơn tùng MTP"
+                            android:textColor="#FFFFFF"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/nunito_medium"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Email and Location LinearLayout -->
+                <LinearLayout
+                    android:id="@+id/email_location_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/avatar_name_layout"
+                    android:layout_marginTop="16dp">
+
+                    <!-- Email Row -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/email_icon"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_email"
+                            app:tint="#FFFFFF" />
+
+                        <TextView
+                            android:id="@+id/email_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/email_hint"
+                            android:textColor="#FFFFFF"
+                            android:fontFamily="@font/nunito_regular"
+                            android:textSize="16sp"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+
+                    <!-- Location Row -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <ImageView
+                            android:id="@+id/location_icon"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_location_white"
+                            app:tint="#FFFFFF" />
+
+                        <TextView
+                            android:id="@+id/location_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Quận 1"
+                            android:textColor="#FFFFFF"
+                            android:fontFamily="@font/nunito_regular"
+                            android:textSize="16sp"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!-- End of Profile Card -->
+
+        </LinearLayout>
+
+        <!-- Bottom LinearLayout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:background="@drawable/rounded_bottom"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+            <!-- Nội dung khác ở phía trên -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@drawable/rounded_bottom"
+                android:id="@+id/contentLayout">
+            <!-- Header Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cài đặt"
+                android:textSize="14sp"
+                android:textColor="#5A5A5A"
+                android:layout_gravity="start"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/nunito_regular"
+                android:paddingBottom="16dp" />
+
+            <!-- Notification Toggle -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="24dp"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Thông Báo"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textColor="@color/Light_Background_BgAccent"
+                    android:textSize="16sp" />
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:theme="@style/mySwitch"
+                    android:thumb="@drawable/baseline_brightness_1_24"
+                    android:track="@drawable/track_selector"
+                    android:padding="1dp" />
+            </LinearLayout>
+
+            <!-- Account Option -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tài khoản"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textColor="@color/Light_Background_BgAccent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_side"
+                    android:layout_margin="10dp"
+                    android:padding="1dp"
+                    app:tint="#5A5A5A"/>
+            </LinearLayout>
+
+            <!-- Terms Option -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Điều khoản"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textColor="@color/Light_Background_BgAccent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_side"
+                    android:layout_margin="10dp"
+                    android:padding="1dp"
+                    app:tint="#5A5A5A"/>
+            </LinearLayout>
+
+            <!-- Language Option -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:paddingVertical="8dp">
+
+                    <LinearLayout
+                        android:id="@+id/language_selector"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Ngôn ngữ"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/nunito_semibold"
+                            android:textColor="@color/Light_Background_BgAccent" />
+
+                        <ImageView
+                            android:id="@+id/icon_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_arrow_side"
+                            android:layout_margin="10dp"
+                            android:padding="1dp"
+                            app:tint="#5A5A5A"/>
+                    </LinearLayout>
+
+                    <!-- TextViews cho tiếng Việt, tiếng Anh và tiếng Nhật -->
+                    <TextView
+                        android:id="@+id/text_vietnamese"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vietnamese"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="35dp"
+                        android:textColor="@color/Light_Background_BgAccent"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/text_english"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/english"
+                        android:textSize="14sp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="35dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:textColor="@color/Light_Background_BgAccent"
+                        android:visibility="gone"/> <!-- Ẩn ban đầu -->
+
+                    <TextView
+                        android:id="@+id/text_japanese"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/japanese"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/nunito_medium"
+                        android:textColor="@color/Light_Background_BgAccent"
+                        android:visibility="gone"/> <!-- Ẩn ban đầu -->
+
+                </LinearLayout>
+            <!-- Rank Option -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:paddingVertical="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hạng"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:textColor="@color/Light_Background_BgAccent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_side"
+                    android:layout_margin="10dp"
+                    android:padding="1dp"
+                    app:tint="#5A5A5A"/>
+            </LinearLayout>
+
+            <!-- App Info Option -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thông tin ứng dụng"
+                android:textSize="16sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/Light_Background_BgAccent"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nunito_semibold"
+                android:paddingVertical="8dp" />
+
+
+
+            </LinearLayout>
+            <!-- Button at the end -->
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/log_out"
+                    android:background="@drawable/rounded_button"
+                    android:textColor="@android:color/white"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/nunito_semibold"
+                    app:backgroundTint="@null"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginBottom="80dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </FrameLayout>

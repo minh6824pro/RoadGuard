@@ -2,19 +2,24 @@ package com.example.myapplication;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link SettingFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
  */
 public class SettingFragment extends Fragment {
-
+    private boolean isExpanded = false;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -23,10 +28,6 @@ public class SettingFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
-    public SettingFragment() {
-        // Required empty public constructor
-    }
 
     /**
      * Use this factory method to create a new instance of
@@ -46,6 +47,10 @@ public class SettingFragment extends Fragment {
         return fragment;
     }
 
+    public SettingFragment() {
+        // Required empty public constructor
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,10 +60,38 @@ public class SettingFragment extends Fragment {
         }
     }
 
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_setting, container, false);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_setting, container, false); // Thay đổi thành layout của bạn
+
+        LinearLayout languageSelector = view.findViewById(R.id.language_selector);
+        TextView textVietnamese = view.findViewById(R.id.text_vietnamese);
+        TextView textEnglish = view.findViewById(R.id.text_english);
+        TextView textJapanese = view.findViewById(R.id.text_japanese);
+        ImageView iconArrow = view.findViewById(R.id.icon_arrow); // Tham chiếu đến ImageView
+
+        languageSelector.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                isExpanded = !isExpanded; // Đảo trạng thái hiển thị
+
+                if (isExpanded) {
+                    // Hiện các TextView
+                    textVietnamese.setVisibility(View.VISIBLE);
+                    textEnglish.setVisibility(View.VISIBLE);
+                    textJapanese.setVisibility(View.VISIBLE);
+                    iconArrow.setImageResource(R.drawable.ic_arrow_down);
+                } else {
+                    // Ẩn các TextView
+                    textVietnamese.setVisibility(View.GONE);
+                    textEnglish.setVisibility(View.GONE);
+                    textJapanese.setVisibility(View.GONE);
+                    iconArrow.setImageResource(R.drawable.ic_arrow_side);
+                }
+            }
+        });
+
+        return view;
     }
 }
