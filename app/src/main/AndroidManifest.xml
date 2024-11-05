@@ -42,9 +42,9 @@
         <activity
             android:name=".ResetPasswordAcivity"
             android:exported="true" />
-        <activity
-            android:name=".MapActivity"
-            android:exported="true" />
+
+
+
     </application>
 
 </manifest>

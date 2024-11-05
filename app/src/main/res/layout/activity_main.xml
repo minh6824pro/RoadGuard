@@ -44,6 +44,7 @@
         android:src="@drawable/baseline_camera_alt_24"
         app:layout_anchor="@id/bottomAppBar"
         app:maxImageSize="40dp"
-        app:tint ="@color/Light_Background_BgAccent"/>
+        app:tint ="@color/Light_Background_BgAccent"
+        android:contentDescription="@string/fab_camera_description"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

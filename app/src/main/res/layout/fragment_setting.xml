@@ -226,34 +226,38 @@
             </LinearLayout>
 
             <!-- Account Option -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="15dp"
-                android:paddingVertical="8dp">
-
-                <TextView
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:id="@+id/account_settings"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Tài khoản"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/nunito_semibold"
-                    android:textColor="@color/Light_Background_BgAccent" />
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="15dp"
+                    android:paddingVertical="8dp"
+                    android:clickable="true"
+                    android:background="?attr/selectableItemBackground">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_arrow_side"
-                    android:layout_margin="10dp"
-                    android:padding="1dp"
-                    app:tint="#5A5A5A"/>
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tài khoản"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/nunito_semibold"
+                        android:textColor="@color/Light_Background_BgAccent" />
 
-            <!-- Terms Option -->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_side"
+                        android:layout_margin="10dp"
+                        android:padding="1dp"
+                        app:tint="#5A5A5A"/>
+                </LinearLayout>
+
+
+                <!-- Terms Option -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
