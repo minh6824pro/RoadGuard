@@ -12,4 +12,7 @@
 
     <color name="selectedIconColor">#304FFE</color>
     <color name="unselectedIconColor">#121212</color>
+
+    <color name="detectedBy">#00E5FF</color>
+
 </resources>
