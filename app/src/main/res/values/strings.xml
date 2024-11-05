@@ -51,12 +51,21 @@
     <string name="not_received">Chưa nhận được mã?</string>
 
 
-
     <!-- RESET PASSWORD STRING -->
     <string name="reset_title">Nhập lại mật khẩu</string>
     <string name="reset_subtitle">Vui lòng nhập mật khẩu mới để đặt lại mật khẩu</string>
     <string name="new_password">Mật khẩu mới</string>
     <string name="agree_button">Xác nhận</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_label">Trang chủ</string>
+    <string name="map_label">Bản đồ</string>
+    <string name="history_label">Lịch sử</string>
+    <string name="setting_label">Cài đặt</string>
+    <string name="log_out">Đăng xuất</string>
+    <string name="japanese">日本語</string>
+    <string name="english">English</string>
+    <string name="vietnamese">Tiếng Việt</string>
 
 
     <!-- HISTORY STRING -->
@@ -65,4 +74,13 @@
     <string name="vi_tri">10.8497° N, 106.7570° E</string>
     <string name="kich_thuoc">Lớn</string>
     <string name="phat_hien_boi">Phương Tuấn</string>
+
+    <!-- BOTTOM NAVBAR STRING -->
+    <string name="fab_camera_description">Mở máy ảnh</string>
+    <string name="account_title">Tài khoản</string>
+
+    <!--  PROFILE STRING  -->
+    <string name="save_button">Lưu</string>
+    <string name="name_profile">Lê Bá Sơn Tùng</string>
+
 </resources>
