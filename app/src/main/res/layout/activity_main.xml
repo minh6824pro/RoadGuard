@@ -41,10 +41,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
-        android:src="@drawable/baseline_camera_alt_24"
+        android:src="@drawable/ic_camera_final"
         app:layout_anchor="@id/bottomAppBar"
-        app:maxImageSize="40dp"
-        app:tint ="@color/Light_Background_BgAccent"
-        android:contentDescription="@string/fab_camera_description"/>
+        app:maxImageSize="60dp"
+        app:tint ="@null"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

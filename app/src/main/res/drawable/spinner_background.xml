@@ -1,0 +1,28 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <layer-list>
+
+            <!-- Layer đường viền -->
+            <item>
+                <shape android:shape="rectangle">
+                    <!-- Màu nền -->
+                    <solid android:color="@android:color/white" />
+                    <!-- Đường viền -->
+                    <stroke android:width="2dp" android:color="#576CFF" />
+                    <!-- Góc bo tròn (tuỳ chọn) -->
+                    <corners android:radius="4dp" />
+                </shape>
+            </item>
+
+            <!-- Layer biểu tượng mũi tên -->
+            <item>
+                <bitmap
+                    android:gravity="center_vertical|right"
+                    android:src="@drawable/ic_caret_down" />
+            </item>
+
+        </layer-list>
+    </item>
+
+</selector>
