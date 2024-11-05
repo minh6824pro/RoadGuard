@@ -4,29 +4,26 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home"
-        android:title="Trang chủ" />
+        android:title="@string/home_label" />
 
     <item
         android:id="@+id/navigation_map"
         android:icon="@drawable/ic_map"
-        android:title="Bản đồ" />
+        android:title="@string/map_label" />
 
     <item
-        android:id="@+id/navigation_scan"
-        android:icon="@drawable/ic_camera"
+        android:id="@+id/fab"
         android:title=""
-        android:iconTint="@color/purple"
-        android:checkable="true"
-        android:layout_centerInParent="true" />
+        android:enabled="false"/>
 
     <item
         android:id="@+id/navigation_history"
         android:icon="@drawable/ic_history"
-        android:title="Lịch sử" />
+        android:title="@string/history_label" />
 
     <item
         android:id="@+id/navigation_settings"
         android:icon="@drawable/ic_setting"
-        android:title="Cài đặt" />
+        android:title="@string/setting_label" />
 
 </menu>

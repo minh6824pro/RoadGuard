@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Bo góc cho card -->
+    <corners android:radius="28dp" />
+
+    <!-- Màu nền cho card -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- Đường viền -->
+    <stroke
+        android:layout_width="372dp"
+        android:layout_height="170dp"
+        android:color="#CCCCCC" />
+</shape>
