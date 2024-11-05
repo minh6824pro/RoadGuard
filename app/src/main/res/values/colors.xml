@@ -6,6 +6,7 @@
     <color name="main_background">#F7F7F7</color>
     <color name="light_content_tertiary">#5A5A5A</color>
     <color name="Light_Background_BgAccent">#304FFE</color>
+    <color name="Content_Primary">#2A2A2A</color>
 
     <color name="selectedColor">#304FFE</color>
     <color name="unselectedColor">#2A2A2A</color>
