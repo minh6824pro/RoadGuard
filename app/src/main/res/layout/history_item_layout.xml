@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <!-- Item Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_card_bg"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingRight="18dp"
+        android:paddingLeft="18dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center_horizontal">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:divider="@android:color/transparent"
+            android:showDividers="middle"
+            android:dividerHeight="16dp">
+
+            <TextView
+                android:id="@+id/itemTitle1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:lineHeight="24sp"
+                android:textColor="@color/Content_Primary"
+                android:textStyle="bold"
+                android:gravity="start"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/itemTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:textSize="14sp"
+                android:lineHeight="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/Content_Primary"
+                android:gravity="end"/>
+        </LinearLayout>
+
+        <!-- Content Details -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:divider="@android:color/transparent"
+            android:showDividers="middle"
+            android:dividerHeight="16dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="17dp"
+                android:layout_weight="1"
+                android:text="Khu vực"
+                android:lineSpacingExtra="-2sp"
+                android:gravity="start"/>
+
+            <TextView
+                android:id="@+id/khu_vuc_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#304FFE"
+                android:gravity="end"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:divider="@android:color/transparent"
+            android:showDividers="middle"
+            android:dividerHeight="16dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="17dp"
+                android:layout_weight="1"
+                android:text="Vị trí"
+                android:lineSpacingExtra="-2sp"
+                android:gravity="start"/>
+
+            <TextView
+                android:id="@+id/vi_tri_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#304FFE"
+                android:gravity="end"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:divider="@android:color/transparent"
+            android:showDividers="middle"
+            android:dividerHeight="16dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="17dp"
+                android:layout_weight="1"
+                android:text="Kích thước"
+                android:lineSpacingExtra="-2sp"
+                android:gravity="start"/>
+
+            <TextView
+                android:id="@+id/size_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#304FFE"
+                android:gravity="end"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:divider="@android:color/transparent"
+            android:showDividers="middle"
+            android:dividerHeight="16dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="17dp"
+                android:layout_weight="1"
+                android:text="Phát hiện bởi"
+                android:lineSpacingExtra="-2sp"
+                android:gravity="start"/>
+
+            <TextView
+                android:id="@+id/find_by_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#304FFE"
+                android:gravity="end"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
