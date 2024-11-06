@@ -34,9 +34,11 @@ android {
     }
 }
 
+
+
 dependencies {
 
-
+    implementation("com.github.AnyChart:AnyChart-Android:1.1.5")
     implementation (libs.mpandroidchart)
     implementation(libs.appcompat)
     implementation(libs.material)

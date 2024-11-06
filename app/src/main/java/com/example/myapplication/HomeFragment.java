@@ -8,31 +8,24 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
-import com.github.mikephil.charting.charts.RadarChart;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
-import com.github.mikephil.charting.data.RadarData;
-import com.github.mikephil.charting.data.RadarDataSet;
-import com.github.mikephil.charting.data.RadarEntry;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
-import com.github.mikephil.charting.formatter.PercentFormatter;
 import com.github.mikephil.charting.formatter.ValueFormatter;
-import com.github.mikephil.charting.interfaces.datasets.IRadarDataSet;
-import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class HomeFragment extends Fragment {
 
     private PieChart pieChart;
+    private PieChart pieChart1;
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -40,122 +33,139 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-         View view = inflater.inflate(R.layout.fragment_home, container, false);
-    
-        
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
         // Khởi tạo BarChart
         BarChart barChart = view.findViewById(R.id.barChart);
+        setUpBarChart(barChart);
 
-        // Dữ liệu cột đầu tiên cho từng ngày
+        pieChart = view.findViewById(R.id.pieChart);
+        setUpPieChart();
+
+        pieChart1 = view.findViewById(R.id.pieChart1);
+        setUpPieChart1();
+
+        return view;
+    }
+
+    private void setUpBarChart(BarChart barChart) {
         ArrayList<BarEntry> values1 = new ArrayList<>();
-        values1.add(new BarEntry(0f, 50f)); // Monday
-        values1.add(new BarEntry(1f, 80f)); // Tuesday
-        values1.add(new BarEntry(2f, 70f)); // Wednesday
-        values1.add(new BarEntry(3f, 90f)); // Thursday
-        values1.add(new BarEntry(4f, 85f)); // Friday
-        values1.add(new BarEntry(5f, 40f)); // Saturday
-        values1.add(new BarEntry(6f, 35f)); // Sunday
+        values1.add(new BarEntry(0f, 50f));
+        values1.add(new BarEntry(1f, 80f));
+        values1.add(new BarEntry(2f, 70f));
+        values1.add(new BarEntry(3f, 90f));
+        values1.add(new BarEntry(4f, 85f));
+        values1.add(new BarEntry(5f, 40f));
+        values1.add(new BarEntry(6f, 35f));
 
-        // Dữ liệu cột thứ hai cho từng ngày
         ArrayList<BarEntry> values2 = new ArrayList<>();
-        values2.add(new BarEntry(0f, 30f)); // Monday
-        values2.add(new BarEntry(1f, 90f)); // Tuesday
-        values2.add(new BarEntry(2f, 20f)); // Wednesday
-        values2.add(new BarEntry(3f, 40f)); // Thursday
-        values2.add(new BarEntry(4f, 75f)); // Friday
-        values2.add(new BarEntry(5f, 30f)); // Saturday
-        values2.add(new BarEntry(5f, 20f)); // Sunday
+        values2.add(new BarEntry(0f, 30f));
+        values2.add(new BarEntry(1f, 90f));
+        values2.add(new BarEntry(2f, 20f));
+        values2.add(new BarEntry(3f, 40f));
+        values2.add(new BarEntry(4f, 75f));
+        values2.add(new BarEntry(5f, 30f));
+        values2.add(new BarEntry(6f, 20f));
 
-        // Tạo BarDataSet cho mỗi nhóm cột
         BarDataSet set1 = new BarDataSet(values1, "Phát hiện bởi bạn");
         set1.setColor(getResources().getColor(R.color.detectedBy));
 
         BarDataSet set2 = new BarDataSet(values2, "Tất cả");
         set2.setColor(getResources().getColor(R.color.Light_Background_BgAccent));
 
-        // Tạo BarData và thêm các BarDataSet vào
         BarData data = new BarData(set1, set2);
-        data.setBarWidth(0.25f); // Độ rộng mỗi cột
+        data.setBarWidth(0.25f);
 
-        // Tùy chỉnh khoảng cách giữa các nhóm cột
         barChart.setData(data);
-        barChart.groupBars(-0.5f, 0.3f, 0.1f); // Tham số (startX, groupSpace, barSpace)
+        barChart.groupBars(-0.5f, 0.3f, 0.1f);
         barChart.invalidate();
 
-        // Thiết lập trục X với nhãn
-        String[] days = new String[]{"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday"};
+        String[] days = new String[]{"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
         XAxis xAxis = barChart.getXAxis();
         xAxis.setValueFormatter(new IndexAxisValueFormatter(days));
         xAxis.setCenterAxisLabels(true);
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         xAxis.setGranularity(1f);
         xAxis.setGranularityEnabled(true);
-        barChart.setVisibleXRangeMaximum(7);
-
         xAxis.setCenterAxisLabels(false);
+        xAxis.setAxisMinimum(-0.5f);
+        xAxis.setAxisMaximum(days.length - 0.5f);
 
-        xAxis.setAxisMinimum(-0.5f); // Start slightly before the first bar
-        xAxis.setAxisMaximum(days.length - 0.5f); // End slightly after the last bar
-
-        // Tùy chọn khác
         barChart.getDescription().setEnabled(false);
         barChart.setDragEnabled(true);
-        barChart.setVisibleXRangeMaximum(7); // Số lượng nhãn X tối đa
         barChart.setExtraBottomOffset(10f);
 
-
-        // Legend center
         Legend legend = barChart.getLegend();
         legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER);
         legend.setVerticalAlignment(Legend.LegendVerticalAlignment.BOTTOM);
         legend.setOrientation(Legend.LegendOrientation.HORIZONTAL);
         legend.setDrawInside(false);
-
-
-
-        
-        
-        pieChart = view.findViewById(R.id.pieChart);
-        setUpPieChart();
-        return view;
     }
 
+    private void setUpPieChart1() {
+        ArrayList<PieEntry> entries = new ArrayList<>();
+        entries.add(new PieEntry(70f, "Hồ Chí Minh"));
+        entries.add(new PieEntry(90f, "Huế"));
+        entries.add(new PieEntry(80f, "Đà Nẵng"));
+        entries.add(new PieEntry(85f, "Hà Nội"));
+        entries.add(new PieEntry(60f, "Cần Thơ"));
+
+        PieDataSet dataSet = new PieDataSet(entries, "Cities Performance");
+        dataSet.setColors(
+                Color.parseColor("#AB6DC3"),
+                Color.parseColor("#0189BB"),
+                Color.parseColor("#FF0000"),
+                Color.parseColor("#00E5FF"),
+                Color.parseColor("#FFA500"));
+        dataSet.setValueTextSize(12f);
+        dataSet.setValueTextColor(Color.BLACK);
+
+        PieData data = new PieData(dataSet);
+        pieChart1.setData(data);
+        pieChart1.invalidate();
+
+        pieChart1.setDrawHoleEnabled(false);
+        pieChart1.getDescription().setEnabled(false);
+        pieChart1.setEntryLabelColor(Color.DKGRAY);
+        pieChart1.setEntryLabelTextSize(12f);
+
+        Legend legend = pieChart1.getLegend();
+        legend.setVerticalAlignment(Legend.LegendVerticalAlignment.BOTTOM);
+        legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER);
+        legend.setOrientation(Legend.LegendOrientation.HORIZONTAL);
+        legend.setDrawInside(false);
+        legend.setFormSize(10f);
+    }
 
     private void setUpPieChart() {
-        // Tạo danh sách các mục cho biểu đồ
         ArrayList<PieEntry> pieEntries = new ArrayList<>();
-        pieEntries.add(new PieEntry(30, "Ổ gà lớn"));  // Entry 1
-        pieEntries.add(new PieEntry(50, "Ổ gà nhỏ"));  // Entry 2
-        pieEntries.add(new PieEntry(20, "Ổ gà trung bình")); // Entry 3
+        pieEntries.add(new PieEntry(30, "Ổ gà lớn"));
+        pieEntries.add(new PieEntry(50, "Ổ gà nhỏ"));
+        pieEntries.add(new PieEntry(20, "Ổ gà trung bình"));
 
         PieDataSet pieDataSet = new PieDataSet(pieEntries, null);
-        pieDataSet.setColors(new int[] {
-                Color.parseColor("#FF0000"), // Màu cho "Ổ gà lớn"
-                Color.parseColor("#00E5FF"), // Màu cho "Ổ gà nhỏ"
-                Color.parseColor("#FFA500")  // Màu cho "Ổ gà trung bình"
+        pieDataSet.setColors(new int[]{
+                Color.parseColor("#FF0000"),
+                Color.parseColor("#00E5FF"),
+                Color.parseColor("#FFA500")
         });
 
         pieDataSet.setValueFormatter(new ValueFormatter() {
             @Override
             public String getFormattedValue(float value) {
-                return String.valueOf((int) value); // Trả về giá trị thực tế
+                return String.valueOf((int) value);
             }
         });
-        // Thiết lập hiển thị tỷ lệ phần trăm với định dạng tùy chỉnh
-        pieDataSet.setValueTextSize(12f); // Kích thước chữ hiển thị phần trăm
-        pieDataSet.setValueTextColor(Color.BLACK); // Màu chữ hiển thị
+
+        pieDataSet.setValueTextSize(12f);
+        pieDataSet.setValueTextColor(Color.BLACK);
 
         PieData pieData = new PieData(pieDataSet);
         pieChart.setData(pieData);
-        pieChart.invalidate(); // Cập nhật biểu đồ
-        pieChart.setDescription(null); // Ẩn mô tả
-        pieChart.setUsePercentValues(true); // Sử dụng giá trị phần trăm
-        pieChart.setDrawEntryLabels(false); // Ẩn nhãn mục
-        pieChart.setHighlightPerTapEnabled(true); // Kích hoạt tính năng nhấn vào để làm nổi bật
+        pieChart.invalidate();
+        pieChart.setDescription(null);
+        pieChart.setUsePercentValues(true);
+        pieChart.setDrawEntryLabels(false);
+        pieChart.setHighlightPerTapEnabled(true);
     }
-
-
-
-
 }
