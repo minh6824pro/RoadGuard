@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,9 +19,9 @@ import androidx.fragment.app.FragmentTransaction;
 public class MapFragment extends Fragment {
 
     private EditText searchBar;
-    private ImageView imageView, imageView2, imageView3, imageView4, imageView5, location;
+    private ImageView imageView, imageView2, imageView3, imageView4, imageView5, location, circle1, circle2;
     private FrameLayout popupContainer;
-    private View backgroundView; // Thêm biến để ánh xạ view mờ
+    private View backgroundView;
 
     @Nullable
     @Override
@@ -36,7 +38,51 @@ public class MapFragment extends Fragment {
         imageView5 = view.findViewById(R.id.imageView5);
         location = view.findViewById(R.id.location);
         popupContainer = view.findViewById(R.id.popup_container);
-        backgroundView = view.findViewById(R.id.popup_background); // Ánh xạ view mờ
+        backgroundView = view.findViewById(R.id.popup_background);
+        circle1 = view.findViewById(R.id.circle1);
+        circle2 = view.findViewById(R.id.circle2);
+
+        circle1.setOnClickListener(v -> {
+            // Tạo hiệu ứng phóng to
+            ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, "scaleX", 0.9f); // Thu nhỏ 90% kích thước ban đầu
+            ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, "scaleY", 0.9f); // Thu nhỏ 90% kích thước ban đầu
+            scaleX.setDuration(150); // Thời gian thu nhỏ
+            scaleY.setDuration(150);
+
+            // Tạo hiệu ứng phóng to trở lại kích thước ban đầu
+            ObjectAnimator scaleBackX = ObjectAnimator.ofFloat(v, "scaleX", 1f);
+            ObjectAnimator scaleBackY = ObjectAnimator.ofFloat(v, "scaleY", 1f);
+            scaleBackX.setDuration(150);
+            scaleBackY.setDuration(150);
+
+            // Kết hợp các hiệu ứng lại
+            AnimatorSet animatorSet = new AnimatorSet();
+            animatorSet.play(scaleX).with(scaleY); // Thu nhỏ
+            animatorSet.play(scaleBackX).with(scaleBackY).after(scaleX); // Phóng to lại sau khi thu nhỏ
+            animatorSet.start();
+            Toast.makeText(getContext(), "Đã về vị trí hiện tại của bạn. ", Toast.LENGTH_SHORT).show();
+
+        });
+        circle2.setOnClickListener(v -> {
+            ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, "scaleX", 0.9f); // Thu nhỏ 90% kích thước ban đầu
+            ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, "scaleY", 0.9f); // Thu nhỏ 90% kích thước ban đầu
+            scaleX.setDuration(150); // Thời gian thu nhỏ
+            scaleY.setDuration(150);
+
+            // Tạo hiệu ứng phóng to trở lại kích thước ban đầu
+            ObjectAnimator scaleBackX = ObjectAnimator.ofFloat(v, "scaleX", 1f);
+            ObjectAnimator scaleBackY = ObjectAnimator.ofFloat(v, "scaleY", 1f);
+            scaleBackX.setDuration(150);
+            scaleBackY.setDuration(150);
+
+            // Kết hợp các hiệu ứng lại
+            AnimatorSet animatorSet = new AnimatorSet();
+            animatorSet.play(scaleX).with(scaleY); // Thu nhỏ
+            animatorSet.play(scaleBackX).with(scaleBackY).after(scaleX); // Phóng to lại sau khi thu nhỏ
+            animatorSet.start();
+            Toast.makeText(getContext(), "Bạn muốn chỉ đường? ", Toast.LENGTH_SHORT).show();
+
+        });
 
         // Thiết lập listener cho background view để ẩn popup
         backgroundView.setOnClickListener(v -> hidePopup());

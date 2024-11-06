@@ -160,10 +160,10 @@ public class CameraActivity extends AppCompatActivity {
         if (camera.getCameraInfo().hasFlashUnit()) {
             if (camera.getCameraInfo().getTorchState().getValue() == 0) {
                 camera.getCameraControl().enableTorch(true);
-                toggleFlash.setImageResource(R.drawable.round_flash_off_24);
+                toggleFlash.setImageResource(R.drawable.ic_un_flash);
             } else {
                 camera.getCameraControl().enableTorch(false);
-                toggleFlash.setImageResource(R.drawable.round_flash_on_24);
+                toggleFlash.setImageResource(R.drawable.ic_flash);
             }
         } else {
             runOnUiThread(new Runnable() {

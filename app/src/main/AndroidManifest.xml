@@ -19,6 +19,7 @@
         <!-- Đặt LoginActivity là activity khởi động -->
         <activity
             android:name=".LoginActivity"
+            android:windowSoftInputMode="adjustNothing"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,10 +31,12 @@
         <!-- android:name=".MainActivity" -->
         <!-- android:exported="true" /> -->
         <activity
+            android:windowSoftInputMode="adjustPan"
             android:name=".RegisterActivity"
             android:exported="true" />
         <activity
             android:name=".ForgotPasswordActivity"
+            android:windowSoftInputMode="adjustPan"
             android:exported="true" />
         <activity
             android:name=".VerificationResetPasswordActivity"
@@ -42,13 +45,16 @@
             android:name=".CameraActivity"
             android:exported="true" />
         <activity
+            android:windowSoftInputMode="adjustPan"
             android:name=".VerificationRegisterActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan"
             android:exported="true" />
         <activity
             android:name=".ResetPasswordAcivity"
+            android:windowSoftInputMode="adjustPan"
             android:exported="true" />
 
 
