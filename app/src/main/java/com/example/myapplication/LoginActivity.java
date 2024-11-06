@@ -54,6 +54,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        btnLogin.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intentMain = new Intent(LoginActivity.this,MainActivity.class);
+                startActivity(intentMain);
+                finish();
+            }
+        });
 
         setLoginTextWithSpannable();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

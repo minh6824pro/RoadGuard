@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +24,7 @@ public class SettingFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_setting, container, false);
 
+        Button btnLogOut=view.findViewById(R.id.btnLogOut);
         defaultStatusBarColor = requireActivity().getWindow().getStatusBarColor();
 
         LinearLayout languageSelector = view.findViewById(R.id.language_selector);
@@ -64,6 +66,15 @@ public class SettingFragment extends Fragment {
             transaction.replace(R.id.frame_layout, profileFragment);
             transaction.addToBackStack(null);
             transaction.commit();
+        });
+
+        btnLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentLogin = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intentLogin);
+                requireActivity().finish();
+            }
         });
 
 
