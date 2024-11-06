@@ -35,8 +35,6 @@ android {
 }
 
 dependencies {
-
-
     implementation (libs.mpandroidchart)
     implementation(libs.appcompat)
     implementation(libs.material)
@@ -47,6 +45,9 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
-
+    implementation("androidx.camera:camera-core:1.4.0")
+    implementation("androidx.camera:camera-camera2:1.4.0")
+    implementation("androidx.camera:camera-lifecycle:1.4.0")
+    implementation("androidx.camera:camera-view:1.4.0")
 
 }

@@ -1,8 +1,10 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
@@ -16,10 +18,18 @@ import android.widget.TextView;
 public class SettingFragment extends Fragment {
     private boolean isExpanded = false;
 
+    private int defaultStatusBarColor;
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_setting, container, false);
+
+
+        Button btnLogOut=view.findViewById(R.id.btnLogOut);
+        defaultStatusBarColor = requireActivity().getWindow().getStatusBarColor();
+
 
         LinearLayout languageSelector = view.findViewById(R.id.language_selector);
         TextView textVietnamese = view.findViewById(R.id.text_vietnamese);
@@ -29,6 +39,7 @@ public class SettingFragment extends Fragment {
 
         languageSelector.setOnClickListener(v -> {
             isExpanded = !isExpanded;
+
 
             if (isExpanded) {
                 textVietnamese.setVisibility(View.VISIBLE);
@@ -62,7 +73,31 @@ public class SettingFragment extends Fragment {
             transaction.commit();
         });
 
+        btnLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentLogin = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intentLogin);
+                requireActivity().finish();
+            }
+        });
+
 
         return view;
     }
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Đặt màu Status Bar thành #FFFFFF
+        requireActivity().getWindow().setStatusBarColor(ContextCompat.getColor(requireContext(), R.color.Light_Background_BgAccent));
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        // Khôi phục lại màu Status Bar ban đầu
+        requireActivity().getWindow().setStatusBarColor(defaultStatusBarColor);
+    }
+
+
 }

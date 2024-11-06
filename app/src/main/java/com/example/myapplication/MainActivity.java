@@ -1,15 +1,21 @@
 package com.example.myapplication;
 
 import android.os.Bundle;
+import android.view.View;
+
+import androidx.activity.EdgeToEdge;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.myapplication.databinding.ActivityMainBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +23,18 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
+        FloatingActionButton btnCamera = findViewById(R.id.btnCamera);
+        replaceFragment(new HomeFragment());
+        binding.bottomNavigationView.setBackground(null);
+
         replaceFragment(new HomeFragment());  // Khởi tạo fragment mặc định
+
+
+        btnCamera.setOnClickListener(v -> {
+            Intent intentCamera = new Intent(MainActivity.this, CameraActivity.class);
+            startActivity(intentCamera);
+        });
 
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
             int itemId = item.getItemId();
