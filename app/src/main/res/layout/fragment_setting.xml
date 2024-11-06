@@ -171,10 +171,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Cài đặt"
-                android:textSize="14sp"
+                android:textSize="20sp"
                 android:textColor="#5A5A5A"
                 android:layout_gravity="start"
                 android:layout_marginTop="4dp"
+                android:layout_marginBottom="10dp"
                 android:fontFamily="@font/nunito_regular"
                 android:paddingBottom="16dp" />
 
@@ -186,7 +187,8 @@
                 android:orientation="horizontal"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="24dp"
-                android:paddingVertical="8dp">
+                android:paddingVertical="8dp"
+                android:layout_marginBottom="5dp">
 
                 <TextView
                     android:layout_width="0dp"
@@ -195,12 +197,15 @@
                     android:text="Thông Báo"
                     android:fontFamily="@font/nunito_semibold"
                     android:textColor="@color/Light_Background_BgAccent"
-                    android:textSize="16sp" />
+                    android:textSize="20sp" />
 
                 <Switch
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:checked="true"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    android:layout_marginRight="15dp"
                     android:theme="@style/mySwitch"
                     android:thumb="@drawable/baseline_brightness_1_24"
                     android:track="@drawable/track_selector"
@@ -218,6 +223,7 @@
                     android:layout_marginRight="15dp"
                     android:paddingVertical="8dp"
                     android:clickable="true"
+                    android:layout_marginBottom="5dp"
                     android:background="?attr/selectableItemBackground">
 
                     <TextView
@@ -225,7 +231,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Tài khoản"
-                        android:textSize="16sp"
+                        android:textSize="20sp"
                         android:fontFamily="@font/nunito_semibold"
                         android:textColor="@color/Light_Background_BgAccent" />
 
@@ -247,6 +253,7 @@
                 android:orientation="horizontal"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
                 android:paddingVertical="8dp">
 
                 <TextView
@@ -254,7 +261,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Điều khoản"
-                    android:textSize="16sp"
+                    android:textSize="20sp"
                     android:fontFamily="@font/nunito_semibold"
                     android:textColor="@color/Light_Background_BgAccent" />
 
@@ -282,6 +289,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
+                        android:layout_marginBottom="5dp"
                         android:orientation="horizontal">
 
                         <TextView
@@ -289,7 +297,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Ngôn ngữ"
-                            android:textSize="16sp"
+                            android:textSize="20sp"
                             android:fontFamily="@font/nunito_semibold"
                             android:textColor="@color/Light_Background_BgAccent" />
 
@@ -309,9 +317,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/vietnamese"
-                        android:textSize="14sp"
+                        android:textSize="16sp"
                         android:fontFamily="@font/nunito_medium"
                         android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_marginLeft="35dp"
                         android:textColor="@color/Light_Background_BgAccent"
                         android:visibility="gone"/>
@@ -321,8 +330,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/english"
-                        android:textSize="14sp"
+                        android:textSize="16sp"
                         android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
                         android:layout_marginLeft="35dp"
                         android:fontFamily="@font/nunito_medium"
                         android:textColor="@color/Light_Background_BgAccent"
@@ -333,9 +343,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/japanese"
-                        android:textSize="14sp"
+                        android:textSize="16sp"
                         android:layout_marginLeft="35dp"
                         android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
                         android:fontFamily="@font/nunito_medium"
                         android:textColor="@color/Light_Background_BgAccent"
                         android:visibility="gone"/> <!-- Ẩn ban đầu -->
@@ -349,6 +360,7 @@
                 android:orientation="horizontal"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="15dp"
+                android:layout_marginBottom="5dp"
                 android:paddingVertical="8dp">
 
                 <TextView
@@ -356,7 +368,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Hạng"
-                    android:textSize="16sp"
+                    android:textSize="20sp"
                     android:fontFamily="@font/nunito_semibold"
                     android:textColor="@color/Light_Background_BgAccent" />
 
@@ -374,7 +386,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Thông tin ứng dụng"
-                android:textSize="16sp"
+                android:textSize="20sp"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/Light_Background_BgAccent"
                 android:gravity="center_vertical"

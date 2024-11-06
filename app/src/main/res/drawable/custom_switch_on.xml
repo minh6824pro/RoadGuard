@@ -1,16 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:bottom="@dimen/switch_padding"
-        android:end="@dimen/switch_padding"
-        android:gravity="center_vertical|fill_horizontal"
-        android:start="@dimen/switch_padding"
-        android:top="@dimen/switch_padding">
-        <shape>
-            <solid android:color="@color/Light_Background_BgAccent" />
-            <corners android:radius="@dimen/switch_radius" />
-            <size android:height="@dimen/switch_size" />
-
-        </shape>
-    </item>
-</layer-list>
+<!-- res/drawable/custom_switch_on.xml -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="2dp"
+    android:insetRight="2dp">
+    <shape android:shape="rectangle">
+        <corners android:radius="12dp" />
+        <solid android:color="@color/Light_Background_BgAccent" /> <!-- Màu khi bật -->
+        <stroke android:width="1dp" android:color="@color/Light_Background_BgAccent" /> <!-- Viền cho trạng thái bật -->
+    </shape>
+</inset>
