@@ -17,15 +17,19 @@ import android.widget.TextView;
 
 public class SettingFragment extends Fragment {
     private boolean isExpanded = false;
+
     private int defaultStatusBarColor;
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_setting, container, false);
 
+
         Button btnLogOut=view.findViewById(R.id.btnLogOut);
         defaultStatusBarColor = requireActivity().getWindow().getStatusBarColor();
+
 
         LinearLayout languageSelector = view.findViewById(R.id.language_selector);
         TextView textVietnamese = view.findViewById(R.id.text_vietnamese);
@@ -35,6 +39,7 @@ public class SettingFragment extends Fragment {
 
         languageSelector.setOnClickListener(v -> {
             isExpanded = !isExpanded;
+
 
             if (isExpanded) {
                 textVietnamese.setVisibility(View.VISIBLE);
@@ -93,5 +98,6 @@ public class SettingFragment extends Fragment {
         // Khôi phục lại màu Status Bar ban đầu
         requireActivity().getWindow().setStatusBarColor(defaultStatusBarColor);
     }
+
 
 }

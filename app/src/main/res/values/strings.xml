@@ -87,7 +87,9 @@
     <!--  PROFILE STRING  -->
     <string name="save_button">Lưu</string>
     <string name="name_profile">Lê Bá Sơn Tùng</string>
+
     <string name="searchbar_hint">Tìm kiếm</string>
     <string name="rank_title">Hạng</string>
+
 
 </resources>

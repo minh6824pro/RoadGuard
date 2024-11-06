@@ -2,8 +2,8 @@ package com.example.myapplication;
 
 import android.graphics.Color;
 import android.os.Bundle;
-
 import androidx.core.content.ContextCompat;
+
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,7 +20,6 @@ public class HistoryFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private int defaultStatusBarColor;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_history, container, false);
@@ -38,8 +37,6 @@ public class HistoryFragment extends Fragment {
                 new HistoryItem("Bạn đã phát hiện ổ gà", "8:00-08/03/2024", "Thủ Đức", "10.8497° N, 106.7570° E", "Lớn", "Phương Tuấn"),
                 new HistoryItem("Bạn đã phát hiện ổ gà", "8:00-08/03/2024", "Thủ Đức", "10.8497° N, 106.7570° E", "Lớn", "Phương Tuấn"),
                 new HistoryItem("Bạn đã phát hiện ổ gà", "8:00-08/03/2024", "Thủ Đức", "10.8497° N, 106.7570° E", "Lớn", "Phương Tuấn")
-
-
 
 
         );

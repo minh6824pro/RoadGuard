@@ -26,6 +26,7 @@ public class HomeFragment extends Fragment {
     private PieChart pieChart1;
     private int defaultStatusBarColor;
 
+    private PieChart pieChart;
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -196,5 +197,4 @@ public class HomeFragment extends Fragment {
         // Khôi phục lại màu Status Bar ban đầu
         requireActivity().getWindow().setStatusBarColor(defaultStatusBarColor);
     }
-
 }
