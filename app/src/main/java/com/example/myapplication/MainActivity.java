@@ -1,18 +1,16 @@
 package com.example.myapplication;
 
-import android.content.Intent;
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
+=======
+>>>>>>> e079266fb6246d45237403f51237619325154796
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-
 import com.example.myapplication.databinding.ActivityMainBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -27,9 +25,13 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+<<<<<<< HEAD
         FloatingActionButton btnCamera = findViewById(R.id.btnCamera);
         replaceFragment(new HomeFragment());
         binding.bottomNavigationView.setBackground(null);
+=======
+        replaceFragment(new HomeFragment());  // Khởi tạo fragment mặc định
+>>>>>>> e079266fb6246d45237403f51237619325154796
 
         btnCamera.setOnClickListener(v -> {
             Intent intentCamera = new Intent(MainActivity.this, CameraActivity.class);
