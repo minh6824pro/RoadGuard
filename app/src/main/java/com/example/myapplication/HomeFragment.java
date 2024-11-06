@@ -26,7 +26,6 @@ public class HomeFragment extends Fragment {
     private PieChart pieChart1;
     private int defaultStatusBarColor;
 
-    private PieChart pieChart;
     public HomeFragment() {
         // Required empty public constructor
     }
